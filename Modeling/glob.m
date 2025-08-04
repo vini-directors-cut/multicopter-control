@@ -3,25 +3,25 @@ frame_type = "quadx";
 
 g = 9.806; % [m/s2]
 
-b = 3.13E-5;  % Fator Empuxo [N.s2]
-d = 7.5E-7;   % Fator Empuxo [Nm.s2]
+b = 2.0E-6 * (60/(2*pi))^2;  % Fator Empuxo [N.s2]  -> SALMA (2020)
+d = 2.1E-7 * (60/(2*pi))^2;   % Fator Arrasto/Torque [Nm.s2] -> SALMA (2020)
 
 P = 4; % Numero de helices
 
-L = 0.232; % Comprimento [m]
+L = 0.450; % Comprimento [m]
 
-m = 0.53; % Massa total [kg]
+m = 1.172; % Massa total [kg]
 
 % Tensor de Inercia
-Ixx = 6.228e-3;  % [kg.m2]
-Iyy = 6.228e-3;  % [kg.m2]
-Izz = 1.122e-2;  % [kg.m2]
-Ixy = 0; 
-Ixz = 0; 
-Iyx = 0;
-Iyz = 0; 
-Izx = 0; 
-Izy = 0; 
+Ixx = 133498.5 * 1E-07;  % [kg.m2]
+Iyy = 141456.8 * 1E-07;  % [kg.m2]
+Izz = 210066.0 * 1E-07;  % [kg.m2]
+Ixy = -1985.4 * 1E-07;
+Ixz = -5432.7 * 1E-07;
+Iyx = -1985.4 * 1E-07;
+Iyz = 5432.4 * 1E-07; 
+Izx = -5432.7 * 1E-07;
+Izy = 5432.4 * 1E-07;
 
 % Inercia do rotor
 r=4;           % redução
